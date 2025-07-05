@@ -1,9 +1,23 @@
 const NewsletterModel = require('../models/NewsletterModel');
 
+// ✅ Email format validator
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+};
+
 const subscribe = async (req, res) => {
   const { email } = req.body;
 
-  if (!email) return res.status(400).json({ error: 'Email is required' });
+  // Check if email is provided
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  // ✅ Check if email is valid
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: 'Invalid email format' });
+  }
 
   try {
     const exists = await NewsletterModel.isEmailSubscribed(email);
