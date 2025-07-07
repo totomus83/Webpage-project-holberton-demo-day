@@ -1,3 +1,4 @@
+// handles database operations for newsletter: add, read, and delete
 const db = require('../config/db');
 
 const NewsletterModel = {
@@ -12,7 +13,7 @@ const NewsletterModel = {
   async getAllSubscribers() {
     return db.withSchema('public').from('subscribers').select('email');
   },
-  
+
   async deleteSubscriber(email) {
     return db('subscribers').where({ email }).del();
   }
