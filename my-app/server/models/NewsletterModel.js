@@ -11,6 +11,10 @@ const NewsletterModel = {
 
   async getAllSubscribers() {
     return db.withSchema('public').from('subscribers').select('email');
+  },
+  
+  async deleteSubscriber(email) {
+    return db('subscribers').where({ email }).del();
   }
 };
 
