@@ -1,9 +1,8 @@
-import React from "react";
-import { Link, Routes, Route } from "react-router-dom";  // import Routes and Route
-import News from "./pages/News";
-import Subscribe from "./pages/Subscribe";
-
-import "./index.css";
+import React from "react"
+import { Link, Routes, Route } from "react-router-dom"
+import News from './pages/News'
+import Subscribe from './pages/Subscribe'
+import './index.css'
 
 function App() {
   return (
@@ -13,8 +12,18 @@ function App() {
           <Link className="nav-button" to="/">Home</Link>
           <Link className="nav-button subscribe"to="/subscribe">Subscribe</Link>
           <Link className="nav-button" to="/news">News</Link>
-          <button className="nav-button">About Us</button>
-          <button className="nav-button">Contact Us</button>
+          <button
+            className="nav-button"
+            onClick={() => document.getElementById("about-us")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            About Us
+          </button>
+          <button
+            className="nav-button"
+            onClick={() => document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Contact Us
+          </button>
         </div>
       </header>
 
@@ -23,7 +32,7 @@ function App() {
           path="/"
           element={
             <main>
-              <h1 className="game-title">The Name Of The Game</h1>
+              <h1 className="game-title">Runy</h1>
 
               <section className="about-game">
                 <h2>About the Game</h2>
@@ -48,12 +57,23 @@ function App() {
                 </div>
               </section>
 
-              <section className="about-us">
+              <section id="about-us" className="about-us">
                 <h2>About Us</h2>
                 <div className="about-us-content">
                   <p>Info About the team</p>
-                  <div className="social-links">
-                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </div>
+              </section>
+              <section id="contact-us" className="contact-us">
+                <h2>Contact Us !</h2>
+                <div className="social-links">
+                  <div className="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                      <img src="/client/images/insta.png" alt="Instagram" className="social-icon" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                      <img src="/client/images/X.png" alt="Twitter/X" className="social-icon twitter-icon" />
+                    </a>
+                    <p>Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a></p>
                   </div>
                 </div>
               </section>
