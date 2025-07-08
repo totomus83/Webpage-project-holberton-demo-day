@@ -32,7 +32,11 @@ function App() {
           path="/"
           element={
             <main>
-              <h1 className="game-title">Runy</h1>
+              <div className="game-title-wrapper">
+                <h1 className="game-title">Runy</h1>
+              </div>
+
+              <hr className="section-divider" />
 
               <section className="about-game">
                 <h2 className="about-game-title">About Runy</h2>
@@ -51,12 +55,11 @@ function App() {
               <hr className="section-divider" />
 
               <section className="current-section">
-                <div className="news-overlay">
+                <div className="current-overlay">
                   <h1 className="current-state-title">Current state of the Game</h1>
                   <p>The current release of the game has 2 functioning rooms with 2 different athmospheres in an enigmatic world</p>
                   <div className="room-1">
                     <img src="/client/images/room1_view.png" className="image-room-1"/>
-                    
                     <video width="400"
                       autoPlay
                       loop
@@ -64,18 +67,18 @@ function App() {
                       playsInline
                       className="about-game-video"
                     >
-                    <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
-                  </video>
+                      <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
+                    </video>
                   <p className="room-description">
                     The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
                   </p>
                   </div>
-                  <div className="room-1">
+                  <div className="room-2">
                     <div className="image-room-2">
                       <img src="/client/images/2room1.png"/>
                       <img src="/client/images/2room2.png"/>
                     </div>
-                    <p className="room-description-2">
+                    <p className="room-description">
                       The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
                     </p>
                   </div>
@@ -96,6 +99,8 @@ function App() {
                 <div className="footer-left">
                   <h2>Contact Us!</h2>
                   <p>Our mission is to bring nostalgia & immersion to our users.</p>
+                  <p>Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a></p>
+                  <p>© 2020 Runy, made with ♥ by students at Holberton School.</p>
                 </div>
 
                 <div className="footer-right">
@@ -107,11 +112,8 @@ function App() {
                       <img src="/client/images/X.png" alt="Twitter/X" className="social-icon twitter-icon" />
                     </a>
                   </div>
-                  <p className="footer-email">
-                    Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a>
-                  </p>
-                  <p class="footer-copyright">© 2020 Runy, made with ♥ by students at Holberton School.</p>
                 </div>
+                
               </footer>
             </main>
           }

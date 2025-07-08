@@ -1,12 +1,16 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-base);
 }
 
 header {
   padding: 12px 20px;
   border-bottom: 1px solid #ccc;
   background-color: #f9f9f9;
+}
+
+:root {
+   --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .nav-bar {
@@ -24,21 +28,34 @@ header {
   font-size: 16px;
   cursor: pointer;
   line-height: 40px;
+  transition: font-size 0.3s ease;
 }
 
 
 .nav-button:hover {
-  background-color: #eee;
+  font-size: 1.1em;
 }
 
 
-.game-title {
+/* .game-title {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin: 40px 0 20px;
+} */
+.game-title-wrapper {
+  background: white;
+  padding: 80px 0; /* control the height/space here */
+  text-align: center;
 }
 
+.game-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 3px 4px black;
+  margin: 0;
+}
 
 .section {
   padding: 30px 20px;
@@ -112,7 +129,7 @@ header {
   color: black;
 }
 .about-game {
-  background: url('/client/images/tempest.png') no-repeat center center;
+  background: url('/client/images/tempest.png') no-repeat center center fixed;
   background-size: cover;
   padding: 60px 40px;
   color: white;
@@ -121,6 +138,18 @@ header {
 .about-game-video {
   width: 500px;
   max-width: 100%;
+}
+
+.current-overlay {
+text-shadow: 4px 5px 6px black;  
+}
+
+.current-state-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0 20px;
+  text-shadow: 4px 5px 6px black;
 }
 
 .current-section {
@@ -149,14 +178,8 @@ header {
   z-index: 2; /* So text stays above the overlay */
 }
 
-.current-state-title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 40px 0 20px;
-}
 .room-1 {
-  width: 500px;
+  max-width: 1000px;
   margin: 40px auto; /* centers the box horizontally */
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.3); /* translucent background for the box */
@@ -164,21 +187,43 @@ header {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 20px;
+  flex-wrap: wrap;
 }
 
-.image-room-1 {
-  width: 100%;
+.image-room-1,
+.about-game-video {
+  width: 45%; /* Adjust depending on your desired layout */
+  max-width: 500px;
   height: auto;
-  display: block;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .room-description {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+  text-align: justify;
   color: white;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+  font-size: 1.1rem;
+  text-shadow: 4px 5px 6px black;
+}
+
+
+.room-2 {
+  max-width: 1000px; /* or any width that fits your layout */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* optional background */
+  border-radius: 10px;
+  overflow: hidden; /* prevents children from overflowing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image-room-2 {
@@ -190,7 +235,7 @@ header {
 }
 
 .image-room-2 img {
-  width: 250px;
+  width: 70%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -205,8 +250,12 @@ header {
 .social-icon {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s ease;
 }
 
+.social-icon:hover {
+  transform: scale(1.1);
+}
 .twitter-icon {
   width:60px; /* override Twitter icon size to match Instagram */
   height: 60px;
@@ -338,14 +387,11 @@ body, html {
 }
 
 
-.footer-email a {
+.footer-left {
   color: #ccc;
   text-decoration: none;
 }
 
-.footer-email a:hover {
-  text-decoration: underline;
-}
 
 .section-divider {
   border: none;
