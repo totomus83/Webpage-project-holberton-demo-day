@@ -37,11 +37,24 @@ function App() {
               <section className="about-game">
                 <h2>About the Game</h2>
                 <div className="about-game-content">
-                  <video width="400" controls>
-                    <source src="/gameplay.mp4" type="video/mp4" />
+                  <video width="400"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="about-game-video"
+                  >
+                    <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
                   </video>
-                  <p>Test</p>
-                </div>
+                  <div className="about-game-text">
+                    <p>Runy is our game develloped by our 2 man team</p>
+                    <p>Both of us have always been passionate about video game, and after many years of passion we wanted to try and make one ouf our own !</p>
+                    <p>We want to make mysterious story and environment that is immersive to the player.</p>
+                  </div>
+                  </div>
+                  <div className="about-game-footer">
+                    <p>For this early build, our game consists of only 2 rooms with 2 different environment. As development continues, more environment, rooms and unique features will be available to the players</p>
+                  </div>
               </section>
 
               <section className="news-section">

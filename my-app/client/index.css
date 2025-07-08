@@ -71,16 +71,36 @@ header {
 
 .about-game-content {
   display: flex;
-  align-items: center;
-  gap: 20px; /* space between video and text */
+  align-items: flex-start;
+  gap: 20px;
 }
 
+.about-game-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-game-footer {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #ccc;
+}
 
 .about-game {
   background-color: #000; /* or your actual path */
   padding: 40px;
   color: white;
   min-height: 300px;               /* Adjust height as needed */
+}
+
+.about-game-video {
+  border: none;
+  outline: none;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .social-icons {
