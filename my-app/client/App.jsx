@@ -35,35 +35,50 @@ function App() {
               <h1 className="game-title">Runy</h1>
 
               <section className="about-game">
-                <h2>About the Game</h2>
+                <h2 className="about-game-title">About Runy</h2>
                 <div className="about-game-content">
-                  <video width="400"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="about-game-video"
-                  >
-                    <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
-                  </video>
                   <div className="about-game-text">
                     <p>Runy is our game develloped by our 2 man team</p>
-                    <p>Both of us have always been passionate about video game, and after many years of passion we wanted to try and make one ouf our own !</p>
                     <p>We want to make mysterious story and environment that is immersive to the player.</p>
-                  </div>
-                  </div>
-                  <div className="about-game-footer">
                     <p>For this early build, our game consists of only 2 rooms with 2 different environment. As development continues, more environment, rooms and unique features will be available to the players</p>
+                    <a href="/client/downloads/runy.zip" className="download-button" download>
+                      Download
+                    </a>
                   </div>
+                </div>
               </section>
+              
+              <hr className="section-divider" />
 
-              <section className="news-section">
+              <section className="current-section">
                 <div className="news-overlay">
-                  <h2>News</h2>
-                  <video width="400" controls>
-                    <source src="/news.mp4" type="video/mp4" />
+                  <h1 className="current-state-title">Current state of the Game</h1>
+                  <p>The current release of the game has 2 functioning rooms with 2 different athmospheres in an enigmatic world</p>
+                  <div className="room-1">
+                    <img src="/client/images/room1_view.png" className="image-room-1"/>
+                    
+                    <video width="400"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="about-game-video"
+                    >
+                    <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
                   </video>
-                  <p>News about the game here</p>
+                  <p className="room-description">
+                    The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
+                  </p>
+                  </div>
+                  <div className="room-1">
+                    <div className="image-room-2">
+                      <img src="/client/images/2room1.png"/>
+                      <img src="/client/images/2room2.png"/>
+                    </div>
+                    <p className="room-description-2">
+                      The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
+                    </p>
+                  </div>
                   <p>
                     <Link to="/news">See more about development here</Link>
                   </p>
@@ -74,11 +89,16 @@ function App() {
                 <h2>About Us</h2>
                 <div className="about-us-content">
                   <p>Info About the team</p>
+                  <p>Both of us have always been passionate about video game, and after many years of passion we wanted to try and make one ouf our own !</p>
                 </div>
               </section>
-              <section id="contact-us" className="contact-us">
-                <h2>Contact Us !</h2>
-                <div className="social-links">
+              <footer id="contact-us" className="contact-us-footer">
+                <div className="footer-left">
+                  <h2>Contact Us!</h2>
+                  <p>Our mission is to bring nostalgia & immersion to our users.</p>
+                </div>
+
+                <div className="footer-right">
                   <div className="social-icons">
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                       <img src="/client/images/insta.png" alt="Instagram" className="social-icon" />
@@ -86,10 +106,13 @@ function App() {
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                       <img src="/client/images/X.png" alt="Twitter/X" className="social-icon twitter-icon" />
                     </a>
-                    <p>Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a></p>
                   </div>
+                  <p className="footer-email">
+                    Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a>
+                  </p>
+                  <p class="footer-copyright">© 2020 Runy, made with ♥ by students at Holberton School.</p>
                 </div>
-              </section>
+              </footer>
             </main>
           }
         />

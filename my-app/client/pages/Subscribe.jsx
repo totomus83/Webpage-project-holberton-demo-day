@@ -30,24 +30,21 @@ export default function Subscribe() {
   };
 
   return (
-    <>
-      <div className="background-blur"></div>
-      <div className="subscribe-container">
-        <h1 className="subscribe-title">Subscribe</h1>
-        <p className="subscribe-description">Subscribe for updates about the game and more!</p>
-        <form className="subscribe-form" onSubmit={handleSubmit}>
-          <input
-            className="subscribe-input"
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <button className="subscribe-button" type="submit">Submit</button>
-        </form>
-        {status && <p className="subscribe-status">{status}</p>}
-      </div>
-    </>
+    <div className="subscribe-container">
+      <h1 className="subscribe-title">Subscribe</h1>
+      <p className="subscribe-description">Subscribe for updates about the game and more!</p>
+      <form className="subscribe-form" onSubmit={handleSubmit}>
+        <input
+          className="subscribe-input"
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <button className="subscribe-button" type="submit">Submit</button>
+      </form>
+      {status && <p className="subscribe-status">{status}</p>}
+    </div>
   );
 }
