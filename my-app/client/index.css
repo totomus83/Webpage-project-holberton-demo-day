@@ -15,21 +15,17 @@ header {
 
 .nav-bar {
   display: flex;
-  justify-content: space-between; /* sépare gauche/droite */
+  justify-content: flex-end;  /* pushes nav-links to right */
   align-items: center;
-  gap: 0;
-  padding: 0 20px; /* optionnel, pour respirer */
-}
-
-.nav-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: black; /* ou la couleur que tu veux */
+  padding: 0 20px;
+  background: white;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-links {
   display: flex;
-  gap: 0; /* tu peux mettre 10px si tu veux */
+  gap: 0; /* or add space you want */
 }
 
 .nav-button {
@@ -44,12 +40,9 @@ header {
   transition: font-size 0.3s ease;
 }
 
-
-
 .nav-button:hover {
   font-size: 1.1em;
 }
-
 
 .game-title-wrapper {
   background: white;
@@ -63,7 +56,7 @@ header {
   margin: 0 0 40px 0;
   text-shadow: 2px 3px 4px black;
   position: relative;
-  top: -250px;
+  top: -170px;
 }
 
 .section {

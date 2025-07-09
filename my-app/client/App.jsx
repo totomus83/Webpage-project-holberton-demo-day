@@ -9,10 +9,9 @@ function App() {
     <>
       <header>
         <div className="nav-bar">
-          <div className="nav-title">Runy</div>
           <div className="nav-links">
-            <Link className="nav-button" to="/">Home</Link>
-            <Link className="nav-button subscribe" to="/subscribe">Subscribe</Link>
+            <a className="nav-button" href="/">Home</a>
+            <Link className="nav-button" to="/subscribe">Subscribe</Link>
             <Link className="nav-button" to="/news">News</Link>
             <button
               className="nav-button"
@@ -29,6 +28,7 @@ function App() {
           </div>
         </div>
       </header>
+
 
 
       <Routes>
@@ -101,7 +101,7 @@ function App() {
                     </div>
                     <div className="team-member">
                       <img src="/client/images/totomus.png" className="team-photo" alt="Totomus" />
-                      <p className="member-name">Totomus – Artist</p>
+                      <p className="member-name">Totomus – Developer</p>
                     </div>
                   </div>
 
