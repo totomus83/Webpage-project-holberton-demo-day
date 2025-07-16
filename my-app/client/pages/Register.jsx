@@ -1,4 +1,3 @@
-// src/pages/Register.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -12,68 +11,68 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Submitting form", { email, username, password });
-
     try {
       const response = await fetch("http://localhost:5000/api/newsletter/subscribe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, username, password }),
       });
 
       const data = await response.json();
-      console.log("Response from server:", data);
 
       if (response.ok) {
         setStatus("Account created successfully! Redirecting to login...");
-        setTimeout(() => navigate("/subscribe"), 1500); // ou "/login" selon ta route
+        setTimeout(() => navigate("/subscribe"), 1500);
       } else {
         setStatus(data.error || data.message || "Something went wrong");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
       setStatus("Error connecting to server");
     }
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: "auto", padding: 20 }}>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="register-container">
+      <h1 className="register-title">Create Account</h1>
+      <form className="register-form" onSubmit={handleSubmit}>
         <input
+          className="register-input"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          style={{ width: "100%", padding: 8, marginBottom: 10 }}
+          autoComplete="email"
         />
         <input
+          className="register-input"
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          style={{ width: "100%", padding: 8, marginBottom: 10 }}
+          autoComplete="username"
         />
         <input
+          className="register-input"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={{ width: "100%", padding: 8, marginBottom: 10 }}
+          autoComplete="new-password"
         />
-        <button type="submit" style={{ width: "100%", padding: 10 }}>
+        <button className="register-button" type="submit">
           Create Account
         </button>
       </form>
-      <p style={{ marginTop: 15 }}>
-        Already have an account? <Link to="/subscribe">Login here</Link>
+      <p className="register-login-text">
+        Already have an account?{" "}
+        <Link to="/subscribe" className="register-login-link">
+          Login here
+        </Link>
       </p>
-      {status && <p>{status}</p>}
+      {status && <p className="register-status">{status}</p>}
     </div>
   );
 }
