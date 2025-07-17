@@ -152,7 +152,7 @@ function App() {
                     <h2>Contact Us!</h2>
                     <p>Our mission is to bring nostalgia & immersion to our users.</p>
                     <p>Or contact us at: <a href="mailto:runy.newsletter@gmail.com">runy.newsletter@gmail.com</a></p>
-                    <p>© 2020 Runy, made with ♥ by students at Holberton School.</p>
+                    <p>© 2025 Runy, made with ♥ by students at Holberton School.</p>
                   </div>
 
                   <div className="social-icons">
