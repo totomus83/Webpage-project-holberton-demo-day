@@ -1,21 +1,22 @@
 import React from "react";
 import ImageGallery from "../effects/ImageGallery"
+import FadeInSection from "../effects/FadeInSection";
 
 export default function News() {
   return (
     <>
     <hr className="section-divider" />
     <div className="page">
-      <h1>News About Runy</h1>
-      <h2>Glimpse of the development of our Game</h2>
-      <p>For the development of Runy we used many tools:</p>
-      <div className="tools-logos">
-        <img src="/client/images/Blenderlogo.png" alt="Blender" />
-        <img src="/client/images/Unity1.png" alt="Unity" />
-        <img src="/client/images/csharp.png" alt="C# Scripting" className="csharp"/>
-        <img src="/client/images/mirror.png" alt="Mirror" className="mirror"/>
-      </div>
-
+      <section className="tools-background" >
+        <h2>Glimpse of the development of our Game</h2>
+        <p>For the development of Runy we used many tools:</p>
+        <div className="tools-logos">
+          <img src="/client/images/Blenderlogo.png" alt="Blender" />
+          <img src="/client/images/Unity1.png" alt="Unity" />
+          <img src="/client/images/csharp.png" alt="C# Scripting" className="csharp"/>
+          <img src="/client/images/mirror.png" alt="Mirror" className="mirror"/>
+        </div>
+      </section>
 
       <hr className="section-divider" />
 
@@ -46,11 +47,12 @@ export default function News() {
           <p>Grab (E): grab object when entering collider</p>
           <p>Release (R): ungrab object</p>
         </section>
+        <FadeInSection>
         <div className="feature-images-row">
           <img src="/client/images/imageboat.png" alt="Setup 1" />
           <img src="/client/images/scene1_interaction_view.png" alt="Setup 2" />
         </div>
-
+        </FadeInSection>
         <section className="feature-group">
           <div className="feature-title">
             <h4>Network Multiplayer Coop</h4>
@@ -59,11 +61,12 @@ export default function News() {
           <p>Sync player transforms (position/rotation)</p>
           <p>Sync animations via Network Animator</p>
         </section>
+        <FadeInSection>
         <div className="feature-images-row">
           <img src="/client/images/boatunity.png" alt="Setup 1" />
           <img src="/client/images/model1.png" alt="Setup 2" />
         </div>
-
+        </FadeInSection>
         <section className="feature-group">
           <div className="feature-title">
             <h4>Puzzles</h4>
@@ -78,25 +81,23 @@ export default function News() {
           <p>Fade to show rune correctness</p>
           <p>Trigger sea movement when all runes placed</p>
         </section>
+        <FadeInSection>
         <div className="feature-images-row">
           <img src="/client/images/puzzlerune1.png" alt="Setup 1" />
           <img src="/client/images/runeboat1.png" alt="Setup 2" />
         </div>
+        </FadeInSection>
       </section>
 
       <hr className="section-divider" />
-
       <section className="gallery">
+        <FadeInSection>
         <div className="gallery-box">
           <h2 className="insight-title">Preview images of the current build</h2>
           <ImageGallery className="insight-gallery" />
         </div>
+        </FadeInSection>
       </section>
-
-      <hr className="section-divider" />
-
-      <h2>Future of the Development</h2>
-      <p>More features and puzzles coming soon...</p>
     </div>
     </>
   );

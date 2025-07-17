@@ -197,7 +197,7 @@ text-shadow: 4px 5px 6px black;
 }
 
 .current-section {
-  background: url('/client/images/bluedegrade.png') no-repeat center center;
+  background: url('/client/images/wavegif.gif') no-repeat center center;
   background-size: cover;
   padding: 40px;
   color: white;
@@ -301,6 +301,18 @@ text-shadow: 4px 5px 6px black;
   z-index: 10;
 }
 
+.about-us {
+  background-image: url('/client/images/whitebackground1.png'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 80px 40px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .about-title {
   font-size: 36px;
   color: #000000;
@@ -383,6 +395,7 @@ text-shadow: 4px 5px 6px black;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 60px;
+  margin-top: 0;
 }
 
 .contact-us-footer h2 {
@@ -471,13 +484,6 @@ text-shadow: 4px 5px 6px black;
   color: #007bff;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
 .background-blur {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -539,6 +545,8 @@ body, html {
   color: #e0e0e0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   backdrop-filter: blur(10px);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -851,7 +859,7 @@ ul li small {
 
 .page-wrapper {
   min-height: 100vh;
-  background-image: url('/client/images/bluedegrade.png');
+  background: url('/client/images/wavegif.gif') no-repeat center center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -861,15 +869,47 @@ ul li small {
   padding: 20px;
 }
 
+
 /* news page */
 
 .page {
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 0px 0px;
   font-family: 'Inter', sans-serif;
   color: #222;
   background-color: #ffffff;
+}
+.tools-background {
+  background-image: url('/client/images/greytest2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 60px 40px 80px;
+}
+
+.tools-background h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  text-shadow: 0 0 6px #000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tools-background p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 4px #000;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tools-logos {
@@ -988,6 +1028,8 @@ p {
   border-radius: 12px;
   display: block;
   transition: transform 0.3s ease;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .feature-images-row img:hover {
@@ -1011,6 +1053,8 @@ p {
 .gallery-container {
   max-width: 800px;
   margin: 40px auto;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .main-image-wrapper {
@@ -1026,6 +1070,7 @@ p {
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  
 }
 
 .thumbnail-row {
@@ -1034,6 +1079,8 @@ p {
   overflow-x: auto;
   padding: 10px 0;
   margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .thumbnail {
@@ -1045,6 +1092,8 @@ p {
   border-radius: 6px;
   transition: 0.2s ease;
   flex-shrink: 0;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .thumbnail:hover,
@@ -1055,18 +1104,21 @@ p {
 
 .gallery {
   width: 100vw;
+  height: 100vh;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
 
-  background-image: url('/client/images/wavegif.gif');
-  background-size: cover;
+  background-image: url('/client/images/boatbeach1.png');
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   padding: 40px 20px;
+
+  box-sizing: border-box;
 }
 
 
@@ -1085,4 +1137,6 @@ p {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }

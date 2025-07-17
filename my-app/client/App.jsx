@@ -98,6 +98,7 @@ function App() {
                           </p>
                         </div>
                       </FadeInSection>
+                      <hr className="section-divider" />
                       <FadeInSection>
                         <div className="room-2">
                           <div className="image-room-2">
@@ -114,6 +115,7 @@ function App() {
                       </p>
                     </div>
                   </section>
+                  <hr className="section-divider" />
                 <FadeInSection>
                   <section id="about-us" className="about-us">
                     <h2 className="about-title">About Us</h2>
