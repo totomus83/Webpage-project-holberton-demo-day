@@ -68,7 +68,8 @@ function App() {
                     <div className="about-game-content">
                       <div className="about-game-text">
                         <p>Discover a fantasy world full of mysteries as a 2 players coop game !</p>
-                        <p>For this early build, our game consists of only 2 rooms with 2 different environment. As development continues, more environment, rooms and unique features will be available to the players</p>
+                        <p>For this early build, our game consists of only 2 rooms with 2 different environment.</p>
+                        <p>As development continues, more environment, rooms and unique features will be available to you players.</p>
                         <a href="/client/downloads/runy.zip" className="download-button" download>
                           Download
                         </a>
@@ -83,30 +84,20 @@ function App() {
                       <FadeInSection>
                         <div className="room-1">
                           <img src="/client/images/room1_view.png" className="image-room-1" />
-                          <video
-                            width="400"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="about-game-video"
-                          >
-                            <source src="/client/videos/gameplay1.mp4" type="video/mp4" />
-                          </video>
+                          <img src="/client/images/scene1_interaction_view.png" className="image-room-1" />
                           <p className="room-description">
                             The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
                           </p>
                         </div>
                       </FadeInSection>
-                      <hr className="section-divider" />
                       <FadeInSection>
                         <div className="room-2">
                           <div className="image-room-2">
-                            <img src="/client/images/2room1.png" />
-                            <img src="/client/images/2room2.png" />
+                            <img src="/client/images/BeachConifers.png" />
+                            <img src="/client/images/BeachFireflyTree.png" />
                           </div>
                           <p className="room-description">
-                            The first room will have a tempesty but also a calming atmosphere. In the middle of the storm and lost at sea, playing as unknown protagonists with untold stories and goals
+                            The second room will take the players to a different environment, stranded on a stranded island full of mysteries.
                           </p>
                         </div>
                       </FadeInSection>
