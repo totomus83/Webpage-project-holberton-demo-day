@@ -32,47 +32,52 @@ export default function Register() {
   };
 
   return (
-    <div className="register-container">
-      <h1 className="register-title">Create Account</h1>
-      <form className="register-form" onSubmit={handleSubmit}>
-        <input
-          className="register-input"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          autoComplete="email"
-        />
-        <input
-          className="register-input"
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-          autoComplete="username"
-        />
-        <input
-          className="register-input"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          autoComplete="new-password"
-        />
-        <button className="register-button" type="submit">
-          Create Account
-        </button>
-      </form>
-      <p className="register-login-text">
-        Already have an account?{" "}
-        <Link to="/subscribe" className="register-login-link">
-          Login here
-        </Link>
-      </p>
-      {status && <p className="register-status">{status}</p>}
+    <>
+    <hr className="section-divider" />
+    <div className="page-wrapper">
+      <div className="register-container">
+        <h1 className="register-title">Create Account</h1>
+        <form className="register-form" onSubmit={handleSubmit}>
+          <input
+            className="register-input"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            autoComplete="email"
+          />
+          <input
+            className="register-input"
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            autoComplete="username"
+          />
+          <input
+            className="register-input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            autoComplete="new-password"
+          />
+          <button className="register-button" type="submit">
+            Create Account
+          </button>
+        </form>
+        <p className="register-login-text">
+          Already have an account?{" "}
+          <Link to="/subscribe" className="register-login-link">
+            Login here
+          </Link>
+        </p>
+        {status && <p className="register-status">{status}</p>}
+      </div>
     </div>
+    </>
   );
 }

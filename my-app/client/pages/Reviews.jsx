@@ -54,51 +54,56 @@ export default function Reviews() {
   };
 
   return (
-    <div className="reviews-container">
-      <h1>Reviews</h1>
-      <p>
-        Welcome, <strong>{user?.username || "Anonymous"}</strong>! Leave your review below:
-      </p>
+    <>
+    <hr className="section-divider" />
+    <div className="page-wrapper">
+      <div className="reviews-container">
+        <h1>Reviews</h1>
+        <p>
+          Welcome, <strong>{user?.username || "Anonymous"}</strong>! Leave your review below:
+        </p>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Rating:
-          <select
-            value={rating}
-            onChange={(e) => setRating(Number(e.target.value))}
-            required
-          >
-            {[1, 2, 3, 4, 5].map((r) => (
-              <option key={r} value={r}>{r}</option>
-            ))}
-          </select>
-        </label>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Rating:
+            <select
+              value={rating}
+              onChange={(e) => setRating(Number(e.target.value))}
+              required
+            >
+              {[1, 2, 3, 4, 5].map((r) => (
+                <option key={r} value={r}>{r}</option>
+              ))}
+            </select>
+          </label>
 
-        <label>
-          Comment:
-          <textarea
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            required
-          />
-        </label>
+          <label>
+            Comment:
+            <textarea
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              required
+            />
+          </label>
 
-        <button type="submit">Submit Review</button>
-      </form>
+          <button type="submit">Submit Review</button>
+        </form>
 
-      {status && <p>{status}</p>}
+        {status && <p>{status}</p>}
 
-      <h2>All Reviews</h2>
-      <ul>
-        {reviews.length === 0 && <p>No reviews yet.</p>}
-        {reviews.map((review) => (
-          <li key={review.id}>
-            <strong>{review.username}</strong> ({review.rating} stars): {review.comment}
-            <br />
-            <small>{new Date(review.created_at).toLocaleString()}</small>
-          </li>
-        ))}
-      </ul>
+        <h2>All Reviews</h2>
+        <ul>
+          {reviews.length === 0 && <p>No reviews yet.</p>}
+          {reviews.map((review) => (
+            <li key={review.id}>
+              <strong>{review.username}</strong> ({review.rating} stars): {review.comment}
+              <br />
+              <small>{new Date(review.created_at).toLocaleString()}</small>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
+    </>
   );
 }

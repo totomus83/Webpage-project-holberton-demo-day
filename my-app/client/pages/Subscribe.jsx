@@ -38,6 +38,8 @@ export default function Subscribe() {
   };
 
 return (
+  <>
+  <hr className="section-divider" />
   <div className="page-wrapper">
     <div className="login-container">
       <h1 className="login-title">Login</h1>
@@ -74,6 +76,7 @@ return (
       {status && <p className="login-status">{status}</p>}
     </div>
   </div>
+  </>
 );
 
 }
