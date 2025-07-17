@@ -7,6 +7,7 @@ const images = [
   "/client/images/BeachConifers.png",
   "/client/images/BeachFireflyTree.png",
   "/client/images/BeachForest.png",
+  "/client/images/SandMapVisible.png",
 ];
 
 export default function ImageGallery() {
